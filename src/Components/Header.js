@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className="ui fixed menu">
       <div className="ui container">
-        <h2>Contact Manger</h2>
+        <h2 style={{ color: "Green" }}>Contact Manger</h2>
       </div>
     </div>
   );
