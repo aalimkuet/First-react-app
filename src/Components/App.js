@@ -10,8 +10,14 @@ function MyApp() {
   const [contacts, setContacts] = useState([]);
 
   const addContactHandler = (contact) => {
-    console.log(contact);
     setContacts([...contacts, { id: uuid(), ...contact }]);
+  };
+
+  const removeContactHandler = (id) => {
+    const newContactList = contacts.filter((contact) => {
+      return contact.id != id;
+    });
+    setContacts(newContactList);
   };
 
   useEffect(() => {
@@ -29,7 +35,7 @@ function MyApp() {
     <div className="ui container">
       <Header />
       <AddContact addContactHandle={addContactHandler} />
-      <ContactList contacts={contacts} />
+      <ContactList contacts={contacts} getContactId={removeContactHandler} />
     </div>
   );
 }
