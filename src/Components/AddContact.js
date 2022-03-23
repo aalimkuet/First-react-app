@@ -49,7 +49,7 @@ class AddContact extends React.Component {
           <Button variant="contained" onClick={this.add}>
             ADD
           </Button>
-          {/* <BasicDatePicker></BasicDatePicker> */}
+          <BasicDatePicker></BasicDatePicker>
         </form>
       </div>
     );
